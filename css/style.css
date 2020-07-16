@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000; }
+
+.btn-custom, header .btn-custom, header .navbar-nav .nav-item .nav-link, .book-section .book-wrap, .footer-sec ul li a {
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease; }
+
+.btn-custom, header .btn-custom {
+  color: #fff;
+  padding: 5px 30px;
+  border-radius: 50px;
+  font-size: 16px;
+  background: #21B573;
+  border: 2px solid #21B573; }
+
+header p, .book-section .book-wrap p, .course-sec .card .card-body p {
+  color: #000000;
+  opacity: .7; }
+
+.btn-custom:hover {
+  background: none;
+  color: #21B573; }
+
+header {
+  background-color: #ecfcec; }
+  header .navbar .navbar-toggler {
+    background-color: transparent;
+    border: 1px solid #2d3950; }
+  header .navbar-toggler-icon {
+    color: black !important;
+    content: ""; }
+  header .navbar-brand img {
+    width: 170px; }
+  header .navbar-nav .nav-item .nav-link {
+    color: #000000;
+    padding: 9px 30px;
+    border-radius: 50px;
+    font-size: 16px; }
+    header .navbar-nav .nav-item .nav-link:hover {
+      background: #21B573;
+      color: #fff; }
+  header .navbar-nav .nav-item:last-child .nav-link {
+    padding: 9px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    background: #21B573;
+    color: #fff; }
+  header h4 {
+    font-size: 15px;
+    color: red; }
+  header h1 {
+    font-weight: 800;
+    font-size: 45px; }
+    header h1 span {
+      color: #21B573; }
+  header p {
+    line-height: 1.8; }
+
+.book-section {
+  padding: 50px 0; }
+  .book-section img {
+    height: 100px; }
+  .book-section .book-wrap {
+    background: #ecfcec;
+    border-radius: 10px;
+    padding: 30px 6px; }
+    .book-section .book-wrap h1 {
+      font-size: 25px;
+      font-weight: 600;
+      margin-top: 20px;
+      opacity: .9; }
+    .book-section .book-wrap:hover {
+      box-shadow: 0 16px 32px #0000002b;
+      background: #fff; }
+
+.course-sec {
+  padding: 50px 0; }
+  .course-sec h1 {
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center; }
+  .course-sec .card {
+    border-radius: 10px;
+    box-shadow: 0 16px 32px #0000002b;
+    border: none; }
+    .course-sec .card .card-body h5 {
+      font-size: 26px;
+      margin: 20px 0 10px;
+      font-weight: 600;
+      opacity: .9; }
+    .course-sec .card .card-body .nav {
+      margin-top: 20px; }
+      .course-sec .card .card-body .nav img {
+        height: 22px; }
+      .course-sec .card .card-body .nav span {
+        font-size: 15px;
+        font-weight: 600;
+        color: #000000;
+        opacity: .5;
+        line-height: 1.7; }
+
+.testimoni-sec {
+  padding: 50px 0;
+  background: linear-gradient(to right, #d6ecd6ce, #d4e7d4ce), url(../images/laptop-1209008_1280.jpg) center/cover; }
+  .testimoni-sec .carousel-indicators li {
+    background-color: #21B573; }
+  .testimoni-sec .carousel-indicators {
+    top: 90%; }
+  .testimoni-sec .carousel-item img {
+    height: 150px;
+    width: 250px;
+    border-radius: 50%; }
+  .testimoni-sec h1 {
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center; }
+  .testimoni-sec p {
+    color: #000000; }
+
+.footer-sec {
+  padding-top: 50px;
+  background: #282531; }
+  .footer-sec p {
+    color: #cecece; }
+  .footer-sec ul li:first-child a {
+    color: #fff;
+    font-weight: 800; }
+  .footer-sec ul li a {
+    text-decoration: none;
+    color: #cecece;
+    line-height: 1.8; }
+    .footer-sec ul li a:hover {
+      margin-left: 12px; }
+  .footer-sec span {
+    color: #fff;
+    text-align: center;
+    display: block;
+    padding: 30px 0;
+    opacity: .7; }
+    .footer-sec span a {
+      color: #21B573;
+      text-decoration: none; }
+
+@media (max-width: 991px) {
+  header h1 {
+    font-weight: 800;
+    font-size: 31px; }
+
+  header p {
+    line-height: 1.6; }
+
+  .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: center; }
+
+  .testimoni-sec p {
+    font-size: 14px; }
+
+  .testimoni-sec .carousel-item img {
+    height: 130px;
+    width: 200px; } }
+@media (max-width: 767px) {
+  .navbar-nav {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center; } }
+@media (max-width: 575px) {
+  .btn-custom, header .btn-custom {
+    padding: 5px 20px;
+    font-size: 14px; }
+
+  .navbar-toggler-icon {
+    width: 1em;
+    height: 1em; }
+
+  header .navbar-nav .nav-item .nav-link {
+    font-size: 14px; }
+
+  .footer-sec .row {
+    text-align: center; }
+
+  header .navbar-brand img {
+    width: 161px; }
+
+  header h1 {
+    font-weight: 800;
+    font-size: 31px; }
+
+  header p {
+    line-height: 1.5;
+    font-size: 12px; }
+
+  .book-section img {
+    height: 88px; }
+
+  .book-section .book-wrap h1 {
+    font-size: 21px; }
+
+  .course-sec h1 {
+    font-size: 30px; }
+
+  .course-sec .card .card-body h5 {
+    font-size: 22px; }
+
+  .testimoni-sec h1 {
+    font-size: 30px; }
+
+  .testimoni-sec .carousel-item img {
+    height: 115px;
+    width: 135px; }
+
+  .testimoni-sec p {
+    font-size: 12px;
+    margin-top: 20px; }
+
+  .testimoni-sec .carousel-indicators {
+    top: 95%; } }
+
+/*# sourceMappingURL=style.css.map */

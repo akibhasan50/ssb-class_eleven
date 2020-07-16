@@ -1,0 +1,360 @@
+$primary_color:#000000;
+$secondary_color:#21B573;
+$bg_color:#ecfcec;
+
+@import "__default";
+
+
+
+%transition{
+    transition: all .3s ease ;
+    -moz-transition: all .3s ease ;
+    -webkit-transition: all .3s ease ;
+}
+%btn{
+    color: #fff;
+    padding: 5px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    background: $secondary_color;
+    border: 2px solid $secondary_color;
+    @extend %transition; 
+}
+%paragraph{
+    color: $primary_color;
+    opacity: .7;
+}
+
+@mixin box-shawdow($a,$b,$c,$color) {
+    box-shadow:$a $b $c $color;
+}
+
+.btn-custom{
+    @extend %btn;
+
+    &:hover{
+        background: none;
+        color: $secondary_color;
+        
+    }
+}
+
+header{
+    background-color: $bg_color;
+
+    .navbar .navbar-toggler {
+        
+        background-color: transparent;
+        border: 1px solid #2d3950;
+       
+    }
+    .navbar-toggler-icon {
+        color: black!important;
+        content: "";
+      
+    }
+    .navbar-brand{
+        img{
+            width: 170px;
+        }
+        
+    }
+    .navbar-nav{
+        .nav-item{
+           
+            .nav-link{
+                color: $primary_color;
+                padding: 9px 30px;
+                border-radius: 50px;
+                font-size: 16px;
+              
+               @extend %transition;
+
+                &:hover{
+                    background: $secondary_color;
+                    color: #fff;
+                }
+            }
+
+            &:last-child{
+                .nav-link{
+                padding: 9px 30px;
+                border-radius: 50px;
+                font-size: 16px;
+                background: $secondary_color;
+                color: #fff;
+                }
+            }
+
+        }
+    }
+    h4{
+        font-size: 15px;
+        color: red;
+    }
+    h1{
+        font-weight: 800;
+        font-size: 45px;
+        span{
+            color: $secondary_color;
+        }
+    }
+    p{
+      
+        @extend %paragraph;
+        line-height: 1.8;
+    }
+    .btn-custom{
+        @extend %btn;
+       
+    }
+}
+
+.book-section{
+    padding: 50px 0;
+
+    img{
+        height: 100px;
+    }
+    .book-wrap{
+        background: $bg_color;
+        border-radius: 10px;
+        padding: 30px 6px;
+        @extend  %transition;
+
+        h1{
+            font-size: 25px;
+            font-weight: 600;
+            margin-top: 20px;
+            opacity: .9;
+        }
+        p{
+            @extend %paragraph;
+        }
+
+    &:hover{
+        //box-shadow: 0 16px 32px #0000002b;
+        @include box-shawdow(0,16px , 32px,#0000002b );
+         background: #fff;
+    }
+    }
+}
+
+.course-sec{
+    padding: 50px 0;
+    
+        h1{
+            font-size: 35px;
+            font-weight: 800;
+            text-align: center;
+        }
+    
+        .card{
+            border-radius: 10px;
+            @include box-shawdow(0,16px , 32px,#0000002b );
+            border: none;
+            .card-body{
+    
+                h5{
+                    font-size: 26px;
+                    margin: 20px 0 10px;
+                    font-weight: 600;
+                    opacity: .9;
+                }
+                p{
+                    @extend %paragraph; }
+                .nav {
+                    margin-top: 20px;
+                    img{
+                        height: 22px;
+                    }
+                    span{
+                        font-size: 15px;
+                        font-weight: 600;
+                        color: $primary_color;
+                        opacity: .5;
+                        line-height: 1.7;
+                        
+                    }
+                }
+            }
+        }
+    
+  
+}
+
+.testimoni-sec{
+    padding: 50px 0;  
+    background: linear-gradient(to right, #d6ecd6ce, #d4e7d4ce), url(../images/laptop-1209008_1280.jpg) center/cover;
+    .carousel-indicators li {
+        background-color: $secondary_color;
+    }
+    .carousel-indicators{
+        top: 90%;
+    }
+    .carousel-item{
+        img{
+            height: 150px;
+            width: 250px;
+            border-radius: 50%;
+        }
+    }
+    h1{
+        font-size: 35px;
+        font-weight: 800;
+        text-align: center;
+    }
+   p{
+      
+    color: $primary_color;
+    
+   
+   }
+}
+.footer-sec{
+    padding-top: 50px; 
+    background: #282531;
+    p{
+        color:rgb(206, 206, 206);
+    }
+    ul{
+        li{
+            &:first-child{
+                a{
+                    color:#fff;
+                    font-weight: 800;
+                }
+            }
+            a{
+                text-decoration: none;
+                color:rgb(206, 206, 206);
+                line-height: 1.8;
+                @extend %transition;
+                &:hover{
+                   margin-left: 12px;
+                   
+                }
+                
+            }
+
+           
+        }
+    }
+    span{
+        color: #fff;
+        text-align: center;
+        display: block;
+        padding: 30px 0;
+        opacity: .7;
+
+        a{
+            color: $secondary_color;
+            text-decoration: none;
+        }
+    }
+}
+
+@media(max-width:1199px){
+    
+}
+@media(max-width:991px){
+    header h1 {
+        font-weight: 800;
+        font-size: 31px;
+    }
+    header p {
+        line-height: 1.6;
+    }
+
+    .navbar-nav {
+        
+        -ms-flex-direction: row;
+        flex-direction: row;
+       justify-content: center;
+       
+    }
+    .testimoni-sec p {
+
+        font-size: 14px;
+    }
+
+    .testimoni-sec .carousel-item img {
+        height: 130px;
+        width: 200px;
+       
+    }
+}
+@media(max-width:767px){
+    .navbar-nav {
+        
+        -ms-flex-direction: column;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+}
+@media(max-width:575px){
+
+    .btn-custom, header .btn-custom {
+       
+        padding: 5px 20px;
+       
+        font-size: 14px;
+       
+    }
+    .navbar-toggler-icon {
+        
+        width: 1em;
+        height: 1em;
+    }
+
+    header .navbar-nav .nav-item .nav-link {
+        font-size: 14px;
+    }
+    .footer-sec .row{
+        text-align: center;
+    }
+    header .navbar-brand img {
+        width: 161px;
+    }
+    header h1 {
+        font-weight: 800;
+        font-size: 31px;
+    }
+    header p {
+        line-height: 1.5;
+        font-size: 12px;
+    }
+
+    .book-section img {
+        height: 88px;
+    }
+    .book-section .book-wrap h1 {
+        font-size: 21px;
+        
+    }
+
+    .course-sec h1 {
+        font-size: 30px;
+
+    }
+    .course-sec .card .card-body h5 {
+        font-size: 22px;
+       
+    }
+    .testimoni-sec h1 {
+        font-size: 30px;
+        
+    }
+    .testimoni-sec .carousel-item img {
+        height: 115px;
+        width: 135px;
+    }
+    .testimoni-sec p {
+        font-size: 12px;
+        margin-top: 20px;
+    }
+    .testimoni-sec .carousel-indicators {
+        top: 95%;
+    }
+}
